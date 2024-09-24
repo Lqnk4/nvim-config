@@ -45,13 +45,21 @@ colorscheme.rose_pine = {
     "rose-pine/neovim",
     name = "rose-pine",
     opts = {
-        variant = "auto", -- auto, main, moon, or dawn
+        variant = "auto",      -- auto, main, moon, or dawn
         dark_variant = "main", --main, moon, or dawn
     },
     config = function()
         vim.cmd("colorscheme rose-pine")
     end,
 
+}
+
+colorscheme.moonfly = {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000,
+    config = function() vim.cmd [[colorscheme moonfly]] end
 }
 
 return colorscheme.kanagawa
