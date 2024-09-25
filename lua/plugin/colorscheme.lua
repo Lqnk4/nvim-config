@@ -1,5 +1,17 @@
 local colorscheme = {}
 
+colorscheme.everforest = {
+    'sainnhe/everforest',
+    lazy = false,
+    priority = 1000,
+    config = function()
+        -- Optionally configure and load the colorscheme
+        -- directly inside the plugin declaration.
+        vim.g.everforest_enable_italic = true
+        vim.cmd.colorscheme('everforest')
+    end
+}
+
 colorscheme.kanagawa = {
     "rebelot/kanagawa.nvim",
     name = "kanagawa",
@@ -41,6 +53,14 @@ colorscheme.kanagawa = {
     end
 }
 
+colorscheme.moonfly = {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000,
+    config = function() vim.cmd [[colorscheme moonfly]] end
+}
+
 colorscheme.rose_pine = {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -54,12 +74,4 @@ colorscheme.rose_pine = {
 
 }
 
-colorscheme.moonfly = {
-    "bluz71/vim-moonfly-colors",
-    name = "moonfly",
-    lazy = false,
-    priority = 1000,
-    config = function() vim.cmd [[colorscheme moonfly]] end
-}
-
-return colorscheme.kanagawa
+return colorscheme.everforest

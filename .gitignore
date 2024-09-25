@@ -1,0 +1,3 @@
+# Ignore lazy.nvim file tracking
+lazy-lock.json
+
